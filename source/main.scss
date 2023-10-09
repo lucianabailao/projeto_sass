@@ -1,0 +1,49 @@
+@use'config/reset';
+@use'config/variaveis';
+
+
+
+body{
+    background-color:variaveis.$corDeFundoCorpo;
+}
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+header{
+    padding: 16px 0;
+    background-color: variaveis.$corDeFundoHeader;
+    text-align: center;
+    color: variaveis.$corDoTexto;
+}
+
+.menu{
+    background-color: variaveis.$corDeFundoHeader;
+}
+
+
+    @media screen and (max-width: variaveis.$tablet) {
+        .container {
+            max-width: 80%;
+        }
+    
+        .products {
+            grid-template-columns: repeat(2, 48.5%);
+            column-gap: 3%;
+        }
+    }
+
+    @media screen and (max-width:variaveis.$mobile){
+        .container{
+            max-width: 80%;
+        }
+        .products {
+            display: block;
+        }
+    
+        .product-item  {
+            margin-bottom: 32px;
+        }
+    }     
+    
